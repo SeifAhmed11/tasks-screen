@@ -152,6 +152,9 @@ body {
     font-size: 18px;
     font-weight: 700;
     height: 36px;
+}
+
+.tab-item:last-child {
     clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
 }
 
@@ -166,12 +169,10 @@ body {
 
 .tab-item:nth-child(2) { 
     width: 265px; 
-    margin-left: -82px; 
 }
 
 .tab-item:nth-child(3) { 
     width: 271px; 
-    margin-left: -79px; 
 }
 
 .tasks-actions {
@@ -511,7 +512,7 @@ body {
 
 @media (max-width: 991px) and (min-width: 769px) {
     body {
-        max-width: 720px;
+        max-width: 769px;
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -550,32 +551,66 @@ body {
         padding-right: 10px;
         padding-left: 10px;
         max-width: 100%;
+        overflow-x: hidden;
     }
     
     .site-header {
         padding-top: 15px;
         padding-bottom: 15px;
+        position: sticky;
+        top: 0;
+        background-color: var(--color-bg-main);
+        z-index: 100;
+    }
+    
+    .header-container {
+        flex-wrap: nowrap;
+        gap: 5px;
+        justify-content: space-between;
+    }
+    
+    .logo-icon {
+        width: 125px;
+        height: 30px;
     }
     
     .header-actions {
-        gap: 10px;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+    
+    .notification-button img {
+        width: 20px;
+        height: 20px;
     }
     
     .notification-badge {
-        width: 14px;
-        height: 14px;
-        font-size: 8px;
-        top: -3px;
-        right: -6px;
+        width: 12px;
+        height: 12px;
+        font-size: 7px;
+        top: -2px;
+        right: -4px;
     }
     
     .user-avatar-container {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .user-avatar-container img {
+        width: 24px;
+        height: 24px;
     }
     
     .dropdown-arrow {
-        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        margin: 0 3px;
+    }
+    
+    .menu-button img {
+        width: 20px;
+        height: 20px;
     }
     
     .main-content {
@@ -585,6 +620,7 @@ body {
     .tasks-container {
         padding: 0 10px 15px;
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.12);
+        overflow-x: auto;
     }
     
     .tasks-header {
@@ -595,8 +631,9 @@ body {
     }
     
     .tasks-tabs {
-        flex-wrap: wrap;
+        display: flex;
         width: 100%;
+        overflow-x: auto;
     }
     
     .tab-item {
@@ -608,6 +645,8 @@ body {
         padding-left: 10px;
         font-size: 16px;
         height: 32px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
     
     .tasks-actions {
@@ -699,10 +738,16 @@ body {
     
     .task-action-col {
         width: 100%;
-        justify-content: space-between;
-        margin-top: 8px;
-        padding-top: 8px;
-        border-top: 1px solid var(--color-divider);
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+    
+    .task-action-col img {
+        width: 8px;
+    }
+
+    .task-info-col:last-child{
+        flex-direction: column;
     }
     
     .schedule-btn {
@@ -737,25 +782,84 @@ body {
     body {
         padding-right: 8px;
         padding-left: 8px;
+        overflow-x: hidden;
     }
     
     .site-header {
         padding-top: 10px;
         padding-bottom: 10px;
+        position: sticky;
+        top: 0;
+        background-color: var(--color-bg-main);
+        z-index: 100;
+    }
+    
+    .header-container {
+        flex-wrap: nowrap;
+        gap: 3px;
+        justify-content: space-between;
+    }
+    
+    .logo-icon {
+        width: 125px;
+        height: 25px;
     }
     
     .header-actions {
-        gap: 8px;
+        gap: 3px;
+        flex-wrap: nowrap;
+    }
+    
+    .notification-button img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .notification-badge {
+        width: 10px;
+        height: 10px;
+        font-size: 6px;
+        top: -1px;
+        right: -3px;
+    }
+    
+    .user-avatar-container {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .dropdown-arrow {
+        width: 10px;
+        height: 10px;
+        margin: 0 2px;
+    }
+    
+    .menu-button img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .user-avatar-container img {
+        width: 20px;
+        height: 20px;
     }
     
     .tasks-container {
         padding: 0 8px 10px;
+        overflow-x: auto;
+    }
+    
+    .tasks-tabs {
+        overflow-x: auto;
     }
     
     .tab-item {
-        font-size: 14px;
-        height: 30px;
-        min-width: 100px;
+        font-size: 9px;
+        height: 20px;
+        min-width: 25px;
+        padding-left: 1px;
+        flex-shrink: 0;
+        white-space: nowrap;
     }
     
     .task-card-content {
