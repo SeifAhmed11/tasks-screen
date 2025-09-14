@@ -32,7 +32,6 @@ This project is a user interface for a task management screen developed using HT
 ```
 ├── index.html          # Main page
 ├── global.css          # Main stylesheet
-├── global.js           # JavaScript file (currently empty)
 ├── image/              # Images and icons folder
 │   ├── Logo New.png
 │   ├── avatar-svgrepo-com.png
@@ -47,7 +46,6 @@ This project is a user interface for a task management screen developed using HT
   - CSS Grid for layout
   - CSS Variables for colors
   - Media Queries for responsive design
-- **JavaScript**: (Ready for future development)
 
 ## Supported Statuses
 
@@ -91,29 +89,17 @@ You can customize colors by modifying CSS variables at the beginning of `global.
 ### Adding New Tasks
 You can add new tasks by copying the `task-card` structure in `index.html` and modifying the data.
 
-## Future Development
-
-- [ ] Add JavaScript functionality for interaction
-- [ ] Connect to real database
-- [ ] Add login system
-- [ ] Develop backend API
-- [ ] Add real-time notifications
-- [ ] Develop data export system
 
 ## Requirements
 
 - Modern web browser supporting HTML5 and CSS3
 - No external libraries required
 
-## Support
-
-This project is developed for ELSewedy Electrometer as shown in the footer.
-
 ## License
 
-All rights reserved to ELSewedy Electrometer.
+All rights reserved to Seif Ahmed.
 
 ---
 
-**Developed by**: ELSewedy Electrometer  
-**Last Updated**: 2023
+**Developed by**: Seif Ahmed
+**Last Updated**: 2025
