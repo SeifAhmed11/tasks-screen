@@ -502,7 +502,7 @@ body {
     
     .task-card-content {
         grid-template-columns: repeat(6, 1fr);
-        gap: 15px;
+        gap: 5px;
     }
     
     .tab-item:nth-child(1) { width: 220px; }
@@ -510,7 +510,26 @@ body {
     .tab-item:nth-child(3) { width: 230px; margin-left: -65px; }
 }
 
-@media (max-width: 991px) and (min-width: 769px) {
+@media (max-width: 1184px) and (min-width: 992px) {
+    .task-card-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .tasks-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .tab-item {
+        width: auto !important;
+        margin-left: 0 !important;
+        flex: 0 1 auto;
+        min-width: 180px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 766px) {
     body {
         max-width: 769px;
         padding-right: 15px;
@@ -518,8 +537,8 @@ body {
     }
     
     .task-card-content {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
     }
     
     .tasks-container {
@@ -624,29 +643,28 @@ body {
     }
     
     .tasks-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
         margin-bottom: 0;
     }
     
     .tasks-tabs {
         display: flex;
         width: 100%;
-        overflow-x: auto;
+        flex-wrap: wrap;
+        gap: 0px;
+        overflow-x: visible;
     }
     
     .tab-item {
         margin-left: 0 !important;
         width: auto !important;
-        flex: 1;
-        min-width: 120px;
+        flex: 0 1 auto;
+        min-width: 125px;
         text-align: center;
-        padding-left: 10px;
-        font-size: 16px;
+        padding-left: 1px;
+        padding-right: 11px;
+        font-size: 13px;
         height: 32px;
         white-space: nowrap;
-        flex-shrink: 0;
     }
     
     .tasks-actions {
@@ -661,7 +679,9 @@ body {
     
     .task-list {
         padding-top: 15px;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
     
     .task-card {
@@ -778,6 +798,36 @@ body {
     }
 }
 
+@media (max-width: 768px) and (min-width: 375px) {
+    .task-card-content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 12px 16px;
+        padding: 12px 0;
+    }
+    .task-info-col {
+        width: auto;
+        padding-left: 10px;
+    }
+    .task-info-col::after {
+        display: none;
+    }
+    .task-action-col {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 0;
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 583px) {
+    .task-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 480px) {
     body {
         padding-right: 8px;
@@ -854,10 +904,10 @@ body {
     }
     
     .tab-item {
-        font-size: 9px;
+        font-size: 8px;
         height: 20px;
-        min-width: 25px;
-        padding-left: 1px;
+        min-width: 70px;
+        padding: 5px 15px 5px 1px;
         flex-shrink: 0;
         white-space: nowrap;
     }
